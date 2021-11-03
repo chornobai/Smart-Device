@@ -1,0 +1,1 @@
+{"version":3,"sources":["body.scss"],"names":[],"mappings":"AAAA,MACE,eAAgB,CAChB,WAAY,CACZ,uBAAwB","file":"style.min.css","sourcesContent":[".body {\n  font-size: 100px;\n  width: 700px;\n  background-color: bisque;\n}\n"]}
