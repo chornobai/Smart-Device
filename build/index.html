@@ -13,7 +13,30 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/32.svg" type="image/svg+xml">
   <title>Smart Device - умные технологии</title>
+ <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-image: url('img/Smart\ Device.jpg');
+    }
 
+    @media (max-width: 1023px) {
+      HTML {
+        background-image: url('img/Smart\ Device\ 750.jpg');
+      }
+    }
+
+    @media (max-width: 767px) {
+      HTML {
+        background-image: url('img/Smart\ Device\ 320.jpg');
+      }
+    }
+
+    /* Делаем слой с разметкой полупрозрачным */
+    BODY {
+      opacity: .5;
+    }
+  </style>
 </head>
 
 <body>

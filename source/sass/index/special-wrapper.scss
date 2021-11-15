@@ -1,6 +1,6 @@
 .special-wrapper {
 
-  background: url("../img/background/triangle-desktop.svg") repeat 0 -28px;
+  background: transparent url("../img/background/triangle-desktop.svg") repeat 0 -28px;
   background-size: cover;
   position: relative;
   padding: 113px 0 110px 0;
@@ -9,7 +9,7 @@
 @media (max-width: $tablet-width) {
   .special-wrapper {
     padding: 54px 0 84px 0;
-    background: url("../img/background/triangle-tablet.svg") no-repeat 131 -105px;
+    background: transparent url("../img/background/triangle-tablet.svg") no-repeat 131 -105px;
     background-size: contain;
   }
 }

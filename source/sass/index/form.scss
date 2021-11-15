@@ -16,7 +16,7 @@
     height: 642px;
     top: -154px;
     left: calc(50% - 786px);
-    background: url("../img/decor/plane.png") no-repeat;
+    background: transparent url("../img/decor/plane.png") no-repeat;
     background-size: cover;
   }
 }
@@ -82,6 +82,10 @@
     color: $white;
   }
 
+  &:hover {
+    box-shadow: 0 0 8px $white;
+  }
+
   &:focus {
     box-shadow: 0 0 8px $white;
   }
@@ -102,6 +106,10 @@
 
   &::placeholder {
     color: $white;
+  }
+
+  &:hover {
+    box-shadow: 0 0 8px $white;
   }
 
   &:focus {
@@ -171,7 +179,7 @@
   left: 4px;
   width: 8px;
   height: 5px;
-  background: url("../img/icons/tik.svg") no-repeat center;
+  background: $blue url("../img/icons/tik.svg") no-repeat center;
   background-size: cover;
 }
 
@@ -227,7 +235,7 @@
 
 @media (max-width: $mobile-width) {
   .form {
-    padding: 31px 15px 41px 15px;
+    padding: 30px 15px 41px 15px;
   }
 
   .form-column {

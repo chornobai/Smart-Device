@@ -1,5 +1,6 @@
 .footer {
   padding: 0;
+  background-color: $bone;
 }
 
 .footer-top {
@@ -17,11 +18,12 @@
 
 @media (max-width: $tablet-width) {
   .footer-top {
-    padding: 21px 0 35px 0;
+    padding: 21px 0 34px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     align-items: start;
+    justify-content: space-between;
     grid-column-gap: 15px;
   }
 }

@@ -12,12 +12,12 @@
     height: 515px;
     right: calc(50% - 784px);
     top: -58px;
-    background: url("../img/background/chip-desktop.png") no-repeat;
+    background: transparent url("../img/background/chip-desktop.png") no-repeat;
     background-size: cover;
     z-index: -1;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/background/chip-desktop@2x.png") no-repeat;
+      background: transparent url("../img/background/chip-desktop@2x.png") no-repeat;
       background-size: cover;
     }
   }
@@ -110,12 +110,12 @@
       height: 385px;
       right: 41px;
       top: -105px;
-      background: url("../img/background/chip-tablet.png") no-repeat;
+      background: transparent url("../img/background/chip-tablet.png") no-repeat;
       background-size: cover;
       z-index: -1;
 
       @media (min-resolution: 2dppx) {
-        background: url("../img/background/chip-tablet@2x.png") no-repeat;
+        background: transparent url("../img/background/chip-tablet@2x.png") no-repeat;
         background-size: cover;
       }
     }
@@ -159,12 +159,12 @@
       height: 367px;
       right: -15px;
       top: -217px;
-      background: url("../img/background/chip-mobile.png") no-repeat;
+      background: transparent url("../img/background/chip-mobile.png") no-repeat;
       background-size: cover;
       z-index: -1;
 
       @media (min-resolution: 2dppx) {
-        background: url("../img/background/chip-mobile@2x.png") no-repeat;
+        background: transparent url("../img/background/chip-mobile@2x.png") no-repeat;
         background-size: cover;
       }
     }
