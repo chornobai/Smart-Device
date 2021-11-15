@@ -1,0 +1,200 @@
+.intro {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 16px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: calc(50% - 21px);
+    height: 515px;
+    right: calc(50% - 784px);
+    top: -58px;
+    background: url("../img/background/chip-desktop.png") no-repeat;
+    background-size: cover;
+    z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/background/chip-desktop@2x.png") no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.intro h2 {
+  @include reset-block;
+  margin-bottom: 29px;
+
+  color: $white;
+  text-transform: uppercase;
+
+  font-family: $roboto-condensed;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 117.5%;
+  letter-spacing: 0.07em;
+}
+
+.intro__left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 758px;
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.intro__left-column p {
+  @include reset-block;
+  color: $white;
+  font-size: 22px;
+  line-height: 157%;
+  padding-left: 98px;
+  margin-bottom: 45px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 66px;
+    height: 1px;
+    top: 17px;
+    left: 3px;
+    background: $white;
+  }
+}
+
+.intro-link {
+  margin-left: 98px;
+  color: $white;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 118%;
+  background: $blue;
+  padding: 17px 45px;
+
+  &:hover {
+    background: $white;
+    color: $black;
+    transition: 0.2s;
+  }
+
+  &:focus {
+    background: $white;
+    color: $black;
+  }
+
+  &:active {
+    transform: scale(0.8);
+    transition: ease-out 0.2s;
+  }
+}
+
+.intro-link--mobile {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .intro {
+    padding: 0;
+    margin-left: 64px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 330px;
+      height: 385px;
+      right: 41px;
+      top: -105px;
+      background: url("../img/background/chip-tablet.png") no-repeat;
+      background-size: cover;
+      z-index: -1;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/background/chip-tablet@2x.png") no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+  .intro h2 {
+    @include reset-block;
+    font-size: 60px;
+    margin-bottom: 29px;
+  }
+
+  .intro__left-column {
+    max-width: 426px;
+  }
+
+  .intro__left-column p {
+    font-size: 18px;
+    padding-left: 50px;
+    margin-bottom: 55px;
+
+    &::before {
+      width: 33px;
+    }
+  }
+
+  .intro-link {
+    margin-left: 53px;
+    white-space: nowrap;
+    padding: 17px 31px 19px 30px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .intro {
+    margin-left: 0;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 294px;
+      height: 367px;
+      right: -15px;
+      top: -217px;
+      background: url("../img/background/chip-mobile.png") no-repeat;
+      background-size: cover;
+      z-index: -1;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/background/chip-mobile@2x.png") no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+  .intro h2 {
+    font-size: 40px;
+    margin-bottom: 29px;
+  }
+
+  .intro__left-column p {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .intro__left-column {
+    max-width: 287px;
+  }
+
+  .intro-link {
+    margin: 0 2px;
+    width: 100%;
+    padding: 17px 31px 19px 33px;
+  }
+
+  .intro-link--desktop {
+    display: none;
+  }
+
+  .intro-link--mobile {
+    display: block;
+  }
+}

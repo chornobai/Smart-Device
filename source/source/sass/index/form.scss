@@ -1,0 +1,272 @@
+.form {
+  padding: 93px calc(50% - 604px) 113px;
+  background: $blue url("../img/decor/form-triangle.svg") no-repeat right 39px;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 684px;
+    height: 642px;
+    top: -154px;
+    left: calc(50% - 786px);
+    background: url("../img/decor/plane.png") no-repeat;
+    background-size: cover;
+  }
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 20px 0 0;
+  color: $white;
+  max-width: 590px;
+  position: relative;
+  z-index: 2;
+}
+
+.form-column h2 {
+  @include reset-block;
+  font-family: $roboto-condensed;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 141%;
+  margin-left: -2px;
+  margin-bottom: 9px;
+}
+
+.form-column p {
+  @include reset-block;
+  margin-bottom: 53px;
+}
+
+.form-column form {
+  color: $white;
+  box-sizing: border-box;
+}
+
+.form-list {
+  @include reset;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 31px;
+  grid-row-gap: 40px;
+  margin-bottom: 45px;
+}
+
+.form-item {
+  &--textarea {
+    grid-column: span 2;
+  }
+}
+
+.form-item input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  width: 100%;
+  border: none;
+  padding: 12px 0 12px 17px;
+  background: $blue-light;
+  outline: none;
+
+  &::placeholder {
+    color: $white;
+  }
+
+  &:focus {
+    box-shadow: 0 0 8px $white;
+  }
+}
+
+.form-item textarea {
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  height: 155px;
+  resize: none;
+  width: 100%;
+  background: $blue-light;
+  border: none;
+  outline: none;
+  padding: 14px 0 14px 17px;
+
+  &::placeholder {
+    color: $white;
+  }
+
+  &:focus {
+    box-shadow: 0 0 8px $white;
+  }
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 38px;
+}
+
+.form-button {
+  background: transparent;
+  border: 1px solid $white;
+  padding: 14px 80px 14px 79px;
+  color: $white;
+
+  &:hover {
+    background: $white;
+    color: $black;
+    transition: ease 0.2s;
+  }
+
+  &:focus {
+    background: $white;
+    color: $black;
+  }
+
+  &:active {
+    transform: scale(0.8);
+    transition: ease 0.2s;
+  }
+}
+
+.form-agreement {
+  display: inline-flex;
+  align-items: center;
+}
+
+.form-agreement label {
+  position: relative;
+  padding-left: 33px;
+  font-size: 14px;
+  line-height: 15.68px;
+  color: $white;
+}
+
+.form-agreement input + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+
+  background-color: transparent;
+  border: 1px solid $white;
+  cursor: pointer;
+}
+
+.form-agreement input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 4px;
+  width: 8px;
+  height: 5px;
+  background: url("../img/icons/tik.svg") no-repeat center;
+  background-size: cover;
+}
+
+.form-agreement input:hover + label::before {
+  box-shadow: 0 0 5px 2px $white;
+}
+
+@media (max-width: $tablet-width) {
+  .form {
+    padding: 81px 88px 100px 91px;
+    background-image: none;
+  }
+
+  .form-column {
+    padding: 0;
+    width: 100%;
+  }
+
+  .form-column h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .form-wrapper {
+    width: 100%;
+    justify-content: center;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .form-item input {
+    padding: 14px 0 19px 17px;
+  }
+
+  .form-item textarea {
+    padding: 10px 0 4px 17px;
+  }
+
+  .form-list {
+    margin-bottom: 48px;
+  }
+
+  .form-button {
+    padding: 14px 83px 16px 84px;
+  }
+
+  .form-row {
+    grid-column-gap: 41px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .form {
+    padding: 31px 15px 41px 15px;
+  }
+
+  .form-column {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-list {
+    grid-template-columns: 1fr;
+    grid-row-gap: 28px;
+    margin-bottom: 29px;
+  }
+
+  .form-column h2 {
+    font-size: 28px;
+    margin-bottom: 13px;
+  }
+
+  .form-item {
+    &--textarea {
+      grid-column: span 1;
+    }
+  }
+
+  .form-column p {
+    padding: 0;
+    margin: 0 0 24px;
+  }
+
+  .form-item textarea {
+    height: 104px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+  }
+
+  .form-button {
+    padding: 15px 84px 16px 82px;
+  }
+}

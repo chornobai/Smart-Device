@@ -1,0 +1,126 @@
+.navigation {
+  justify-self: flex-start;
+  margin-left: -7%;
+}
+
+.navigation h2 {
+  font-family: $roboto-condensed;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 106%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding-left: 2px;
+  color: $dark;
+  margin-bottom: 25px;
+}
+
+.navigation-list {
+  @include reset;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: column;
+  width: calc(50% - -282px);
+  grid-column-gap: 20px;
+}
+
+.navigation-link {
+  display: block;
+  color: $dark;
+  opacity: 0.5;
+
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 167%;
+  letter-spacing: 0.02em;
+
+  &:hover {
+    opacity: 1;
+    transition: 0.2s;
+  }
+
+  &:focus {
+    opacity: 1;
+    transition: 0.2s;
+  }
+
+  &:active {
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+}
+
+.navigation-top__button {
+  display: none;
+  position: absolute;
+  top: 29px;
+  right: 17px;
+  width: 16px;
+  height: 16px;
+  background: transparent url("../img/icons/accordion-open.svg") no-repeat center;
+  border: none;
+}
+
+@media (max-width: $tablet-width) {
+  .navigation {
+    max-width: 384px;
+    justify-self: flex-start;
+    margin-left: 0;
+    padding: 0 0 0 25px;
+  }
+
+  .navigation-top h2 {
+    @include reset-block;
+    margin-bottom: 27px;
+  }
+
+  .navigation-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .navigation {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 0 0 15px;
+    border-top: 1px solid $grey-next;
+  }
+
+  .navigation-top {
+    position: relative;
+    padding-top: 28px;
+  }
+
+  .navigation-list {
+    display: none;
+  }
+
+  //accordion-open  - общий класс для открытия меню
+  // no-js - класс работы сайта без js
+
+  .accordion-open .navigation-list {
+    display: block;
+  }
+
+  .accordion-open .navigation-top__button {
+    background: transparent url("../img/icons/accordion-close.svg") no-repeat center;
+  }
+
+  .no-js .navigation-list {
+    display: block;
+  }
+
+  .no-js .navigation-top__button {
+    display: none;
+  }
+
+  .navigation-top__button {
+    display: block;
+  }
+}
