@@ -33,7 +33,9 @@ window.addEventListener('DOMContentLoaded', () => {
     let val = this.value.replace(/\D/g, '');
     if (def.length >= val.length) { val = def; }
 
-    this.value = matrix.replace(/./g, (a) => /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a);
+    this.value = matrix.replace(/./g, (a) => {
+      if (/[_\d]/.test(a) && i < val.length) { return val.charAt(i++); } else if (i >= val.length) { return ''; } else { return a; }
+    });
     if (event.type === 'blur') {
       if (this.value.length === 2) { this.value = ''; }
     } else { setCursorPosition(this.value.length, this); }
