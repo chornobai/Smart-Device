@@ -1,1 +1,20 @@
-@import "body.scss";
+@import "global/variables.scss";
+@import "global/fonts.scss";
+@import "global/global.scss";
+@import "global/mixin.scss";
+
+// Block
+
+@import "index/header.scss";
+@import "index/intro.scss";
+@import "index/special-wrapper.scss";
+@import "index/benefits.scss";
+@import "index/about.scss";
+@import "index/service.scss";
+@import "index/form.scss";
+@import "index/footer.scss";
+@import "index/social.scss";
+@import "index/navigation.scss";
+@import "index/address.scss";
+@import "index/copyright.scss";
+@import "index/popup.scss";
