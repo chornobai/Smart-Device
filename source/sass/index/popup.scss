@@ -17,15 +17,16 @@
 
 .popup {
   position: absolute;
-  left: 50%;
-  top: 15%;
+  left: 50vw;
+  top: 15vh;
   transform: translate(-50%);
-  width: 490px;
+  max-width: 490px;
   background: $blue;
 
   padding: 33px 39px 36px 39px;
   z-index: 1000;
 }
+
 
 .popup h2 {
   @include reset-block;
