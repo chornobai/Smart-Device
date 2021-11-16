@@ -13,30 +13,6 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/32.svg" type="image/svg+xml">
   <title>Smart Device - умные технологии</title>
- <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      background-image: url('img/Smart\ Device.jpg');
-    }
-
-    @media (max-width: 1023px) {
-      HTML {
-        background-image: url('img/Smart\ Device\ 750.jpg');
-      }
-    }
-
-    @media (max-width: 767px) {
-      HTML {
-        background-image: url('img/Smart\ Device\ 320.jpg');
-      }
-    }
-
-    /* Делаем слой с разметкой полупрозрачным */
-    BODY {
-      opacity: .5;
-    }
-  </style>
 </head>
 
 <body>
@@ -237,7 +213,7 @@
               <ul class="form-list">
                 <li class="form-item">
                   <label class="visually-hidden" for="form-name"></label>
-                  <input type="text" id="form-name" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]+$"  required >
+                  <input type="text" id="form-name" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]+$" required>
                 </li>
                 <li class="form-item">
                   <label class="visually-hidden" for="form-phone"></label>
@@ -245,15 +221,15 @@
                 </li>
                 <li class="form-item form-item--textarea">
                   <label class="visually-hidden" for="form-comment"></label>
-                  <textarea name="form-comment" id="form-comment" cols="30"
-                    placeholder="Ваш вопрос" required>
+                  <textarea name="form-comment" id="form-comment" cols="30" placeholder="Ваш вопрос" required>
                   </textarea>
                 </li>
               </ul>
               <div class="form-row">
                 <button class="form-button btn" type="submit" aria-label="Отправить форму">Задать вопрос</button>
                 <div class="form-agreement">
-                  <input class="visually-hidden" type="checkbox" name="agree" id="form-check" value="checked" checked required>
+                  <input class="visually-hidden" type="checkbox" name="agree" id="form-check" value="checked" checked
+                    required>
                   <label for="form-check">Я согласен на обработку персональных данных</label>
                 </div>
               </div>
@@ -296,7 +272,7 @@
             <h2>Разделы сайта</h2>
             <button class="navigation-top__button footer-button" type="button"
               aria-label="Открыть и закрыть меню"></button>
-            </div>
+          </div>
 
           <ul class="navigation-list">
             <li class="navigation-item"><a class="navigation-link" href="#">О компании</a></li>
@@ -352,35 +328,36 @@
   </div>
 
   <div class="popup-wrapper">
-  <section class="popup">
-    <h2>Закажите звонок</h2>
-    <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-    <form action="https://echo.htmlacademy.ru" method="get" autocomplete="off">
-      <ul class="popup-list">
-        <li class="popup-item popup-item--name">
-          <label class="visually-hidden" for="name"></label>
-          <input type="text" name="name" id="name" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]+$" autofocus required >
-        </li>
-        <li class="popup-item popup-item--phone">
-          <label class="visually-hidden" for="phone"></label>
-          <input type="tel" name="phone" id="phone" placeholder="Телефон" maxlength="18" title="+7 (xxx) xxx-xx-xx" required>
-        </li>
-        <li class="popup-item popup-item--text">
-          <label class="visually-hidden" for="comment"></label>
-          <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Ваш вопрос" required></textarea>
-        </li>
-      </ul>
-      <button class="popup-button btn" type="submit" aria-label="Отправить форму">Отправить</button>
-      <div class="popup-agreement">
-        <input class="visually-hidden" type="checkbox" name="checkbox-tik" id="agreement-check" value="agreement"
-          checked required>
-        <label for="agreement-check">Я согласен на обработку персональных данных</label>
-      </div>
-    </form>
-    <button class="popup-close" type="button" aria-label="Закрыть"></button>
-  </section>
-</div>
-<script type="module" src="js/script.js"></script>
+    <section class="popup">
+      <h2>Закажите звонок</h2>
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <form action="https://echo.htmlacademy.ru" method="get" autocomplete="off">
+        <ul class="popup-list">
+          <li class="popup-item popup-item--name">
+            <label class="visually-hidden" for="name"></label>
+            <input type="text" name="name" id="name" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]+$" autofocus required>
+          </li>
+          <li class="popup-item popup-item--phone">
+            <label class="visually-hidden" for="phone"></label>
+            <input type="tel" name="phone" id="phone" placeholder="Телефон" maxlength="18" title="+7 (xxx) xxx-xx-xx"
+              required>
+          </li>
+          <li class="popup-item popup-item--text">
+            <label class="visually-hidden" for="comment"></label>
+            <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Ваш вопрос" required></textarea>
+          </li>
+        </ul>
+        <button class="popup-button btn" type="submit" aria-label="Отправить форму">Отправить</button>
+        <div class="popup-agreement">
+          <input class="visually-hidden" type="checkbox" name="checkbox-tik" id="agreement-check" value="agreement"
+            checked required>
+          <label for="agreement-check">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+      <button class="popup-close" type="button" aria-label="Закрыть"></button>
+    </section>
+  </div>
+  <script type="module" src="js/script.js"></script>
 </body>
 
 </html>
