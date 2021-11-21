@@ -1,6 +1,5 @@
 .navigation {
-  justify-self: flex-start;
-  margin-left: -7%;
+  box-sizing: border-box;
 }
 
 .navigation h2 {
@@ -15,19 +14,27 @@
   margin-bottom: 25px;
 }
 
+.navigation-wrapper {
+  width: 461px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
 .navigation-list {
   @include reset;
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: repeat(4, auto);
-  grid-auto-flow: column;
-  width: calc(50% - -282px);
-  grid-column-gap: 20px;
+
+  &:not(:last-child) {
+    margin-right: 66px;
+  }
+}
+
+.navigation-item {
+  @include reset-block;
 }
 
 .navigation-link {
-  display: block;
   color: $dark;
   opacity: 0.5;
 
@@ -73,7 +80,14 @@
 
   .navigation-top h2 {
     @include reset-block;
-    margin-bottom: 26px;
+    margin-bottom: 25px;
+  }
+
+  .navigation-wrapper {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
   }
 
   .navigation-list {

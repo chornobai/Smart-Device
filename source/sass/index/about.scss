@@ -42,11 +42,11 @@
 }
 
 .about-wrapper p {
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .about-wrapper p + p {
-  margin-bottom: 38px;
+  margin-bottom: 39px;
 }
 
 .about-wrapper-tablet {
@@ -95,14 +95,15 @@
       position: absolute;
       content: "";
       width: 241px;
+      height: 100%;
       left: -28px;
 
       background: url("../img/decor/2005-tablet.png") no-repeat;
-      background-size: cover;
+      background-size: contain;
 
       @media (min-resolution: 2dppx) {
         background: url("../img/decor/2005-tablet@2x.png") no-repeat;
-        background-size: cover;
+        background-size: contain;
       }
     }
   }
@@ -119,11 +120,11 @@
   }
 
   .about-wrapper p {
-    margin-bottom: 4px;
+    margin-bottom: 1px;
   }
 
   .about-wrapper p + p {
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
 }
 
@@ -134,7 +135,7 @@
 
   .about-wrapper h2 {
     font-size: 28px;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
   }
 
   .about-wrapper {

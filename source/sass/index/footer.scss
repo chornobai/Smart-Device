@@ -4,10 +4,9 @@
 }
 
 .footer-top {
-  padding: 52px calc(50% - 719px) 58px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  padding: 54px calc(50% - 719px) 58px;
+  display: grid;
+  grid-template-columns: auto auto auto;
   justify-content: space-between;
 }
 
@@ -18,7 +17,7 @@
 
 @media (max-width: $tablet-width) {
   .footer-top {
-    padding: 21px 0 34px 0;
+    padding: 18px 0 34px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;

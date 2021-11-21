@@ -4,14 +4,10 @@
   flex-direction: column;
   align-items: flex-start;
   padding-left: 10px;
-
-
-  *:last-child {
-    margin: 0;
-  }
 }
 
 .social-logo {
+  width: 216px;
   margin-bottom: 55px;
   padding: 11px 0 0 0;
   margin-right: 25px;
@@ -19,17 +15,11 @@
 
 .social-list {
   @include reset;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding-left: 3px;
-}
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-column-gap: 15px;
 
-.social-item {
-  &:not(:last-child) {
-    margin-right: 15px;
-  }
+  padding-left: 3px;
 }
 
 .social-link {
@@ -77,8 +67,8 @@
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid $grey-next;
-    padding-bottom: 25px;
-    margin-bottom: 38px;
+    padding-bottom: 23px;
+    margin-bottom: 39px;
     padding-left: 0;
   }
 
@@ -92,12 +82,14 @@
   }
 
   .social-logo {
-    padding: 0 0 0 25px;
+    width: auto;
+    padding: 0 0 0 24px;
     margin-bottom: 0;
   }
 
   .social-list {
-    padding-right: 25px;
+    grid-template-columns: repeat(3, auto);
+    padding: 4px 24px 0 0;
   }
 }
 
@@ -112,13 +104,13 @@
   }
 
   .social-logo {
-    padding: 0 0 0 29px;
-    margin-bottom: 27px;
+    padding: 0 0 0 27px;
+    margin-bottom: 11px;
   }
 
   .social-license {
     padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .social-list {

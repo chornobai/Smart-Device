@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smart Device это производство, логистика установка электронных блоков и модулей">
   <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -13,6 +14,7 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/32.svg" type="image/svg+xml">
   <title>Smart Device - умные технологии</title>
+
 </head>
 
 <body>
@@ -213,7 +215,7 @@
               <ul class="form-list">
                 <li class="form-item">
                   <label class="visually-hidden" for="form-name"></label>
-                  <input type="text" id="form-name" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]+$" required>
+                  <input type="text" id="form-name" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё\\\-\]+$" required>
                 </li>
                 <li class="form-item">
                   <label class="visually-hidden" for="form-phone"></label>
@@ -221,8 +223,8 @@
                 </li>
                 <li class="form-item form-item--textarea">
                   <label class="visually-hidden" for="form-comment"></label>
-                  <textarea name="form-comment" id="form-comment" cols="30" placeholder="Ваш вопрос" required>
-                  </textarea>
+                  <textarea name="form-comment" id="form-comment" cols="30" placeholder="Ваш вопрос"
+                    required></textarea>
                 </li>
               </ul>
               <div class="form-row">
@@ -243,7 +245,7 @@
         <section class="footer-social social">
           <h2 class="visually-hidden">Smart Device в социальных сетях</h2>
           <a class="social-logo">
-            <img src="img/logo/logo-footer.svg" alt="Логотип Smart Device" width="224" height="52">
+            <img src="img/logo/logo-footer.svg" alt="Логотип Smart Device" width="216" height="52">
           </a>
           <div class="social-license">
             <p>1999-2018 SD Service Devices</p>
@@ -268,21 +270,24 @@
         </section>
 
         <section class="footer-navigation navigation no-js">
-          <div class="navigation-top ">
+          <div class="navigation-top">
             <h2>Разделы сайта</h2>
             <button class="navigation-top__button footer-button" type="button"
               aria-label="Открыть и закрыть меню"></button>
           </div>
-
-          <ul class="navigation-list">
-            <li class="navigation-item"><a class="navigation-link" href="#">О компании</a></li>
-            <li class="navigation-item"><a class="navigation-link" href="#">Продукты</a></li>
-            <li class="navigation-item"><a class="navigation-link" href="#">Производство печатных плат</a></li>
-            <li class="navigation-item"><a class="navigation-link" href="#">Монтаж печатных плат</a></li>
-            <li class="navigation-item"><a class="navigation-link" href="#">Комплектующие</a></li>
-            <li class="navigation-item"><a class="navigation-link" href="#">Доставка</a></li>
-            <li class="navigation-item"><a class="navigation-link" href="#">Контакты</a></li>
-          </ul>
+          <div class="navigation-wrapper">
+            <ul class="navigation-list">
+              <li class="navigation-item"><a class="navigation-link" href="#">О компании</a></li>
+              <li class="navigation-item"><a class="navigation-link" href="#">Продукты</a></li>
+              <li class="navigation-item"><a class="navigation-link" href="#">Производство печатных плат</a></li>
+              <li class="navigation-item"><a class="navigation-link" href="#">Монтаж печатных плат</a></li>
+            </ul>
+            <ul class="navigation-list">
+              <li class="navigation-item"><a class="navigation-link" href="#">Комплектующие</a></li>
+              <li class="navigation-item"><a class="navigation-link" href="#">Доставка</a></li>
+              <li class="navigation-item"><a class="navigation-link" href="#">Контакты</a></li>
+            </ul>
+          </div>
         </section>
         <section class="footer-address address no-js">
           <div class="address-top">
@@ -335,7 +340,7 @@
         <ul class="popup-list">
           <li class="popup-item popup-item--name">
             <label class="visually-hidden" for="name"></label>
-            <input type="text" name="name" id="name" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]+$" autofocus required>
+            <input type="text" name="name" id="name" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё\\\-\]+$" autofocus required>
           </li>
           <li class="popup-item popup-item--phone">
             <label class="visually-hidden" for="phone"></label>

@@ -1,5 +1,6 @@
 .address {
-  padding-right: 13px;
+  padding-right: 15px;
+  margin-left: 15px;
 }
 
 .address h2 {
@@ -30,7 +31,6 @@
 }
 
 .address-link {
-  display: block;
   color: $dark;
   opacity: 0.5;
 
@@ -73,6 +73,7 @@
     align-items: flex-start;
     justify-content: flex-end;
     padding: 0 35px 0 0;
+    margin-left: 0;
   }
 
   .address-list {
@@ -85,7 +86,7 @@
 
   .address-top h2 {
     @include reset-block;
-    margin-bottom: 26px;
+    margin-bottom: 25px;
   }
 }
 
@@ -105,7 +106,7 @@
 
   .address-list {
     display: none;
-    padding: 0 20px 27px 0;
+    padding: 0 20px 24px 0;
   }
 
   .address-top {

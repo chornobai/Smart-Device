@@ -3,7 +3,7 @@ const form = formBlock.querySelector('form');
 const formName = form.querySelector('#form-name');
 const formPhone = form.querySelector('#form-phone');
 const formText = form.querySelector('#form-comment');
-
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
 // Валидация текстового поля.
 
 formName.addEventListener('input', function () {
@@ -58,3 +58,17 @@ form.addEventListener('submit', (evt) => {
 
   form.reset();
 });
+
+// Скролл
+
+for (const smoothLink of smoothLinks) {
+  smoothLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    const id = smoothLink.getAttribute('href');
+
+    document.querySelector(id).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  });
+}
