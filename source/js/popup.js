@@ -21,7 +21,8 @@ try {
 
 popupOpen.addEventListener('click', (evt) => {
   evt.preventDefault;
-
+  popupName.focus();
+  popupName.select();
   popupOverlay.classList.add('popup-wrapper--overlay');
   body.classList.add('no-scroll');
   if (storage) {
@@ -33,7 +34,7 @@ popupOpen.addEventListener('click', (evt) => {
 // Запись в LocalStorage //
 
 popupForm.addEventListener('submit', (evt) => {
-  if(!popupName.value || !popupPhone.value || !popupText.value){
+  if (!popupName.value || !popupPhone.value || !popupText.value) {
     evt.preventDefault;
   }
   if (isStorageSupport) {
@@ -47,7 +48,7 @@ popupForm.addEventListener('submit', (evt) => {
 
 //Валидация текстового поля.
 
-popupName.addEventListener('input', function(){
+popupName.addEventListener('input', function () {
   this.value = this.value.replace(/[\d]/g, '');
   popupName.reportValidity();
 });
@@ -84,7 +85,7 @@ document.addEventListener('click', (evt) => {
 window.addEventListener('DOMContentLoaded', () => {
   function setCursorPosition(pos, elem) {
     elem.focus();
-    if (elem.setSelectionRange) {elem.setSelectionRange(pos, pos);}
+    if (elem.setSelectionRange) { elem.setSelectionRange(pos, pos); }
     else if (elem.createTextRange) {
       const range = elem.createTextRange();
       range.collapse(true);
@@ -99,12 +100,13 @@ window.addEventListener('DOMContentLoaded', () => {
     let i = 0;
     const def = matrix.replace(/\D/g, '');
     let val = this.value.replace(/\D/g, '');
-    if (def.length >= val.length) {val = def;}
+    if (def.length >= val.length) { val = def; }
     this.value = matrix.replace(/./g, (a) => {
-      if (/[_\d]/.test(a) && i < val.length) {return val.charAt(i++);} else if( i >= val.length) {return '';} else{return a;}});
+      if (/[_\d]/.test(a) && i < val.length) { return val.charAt(i++); } else if (i >= val.length) { return ''; } else { return a; }
+    });
     if (event.type === 'blur') {
-      if (this.value.length === 2) {this.value = '';}
-    } else {setCursorPosition(this.value.length, this);}
+      if (this.value.length === 2) { this.value = ''; }
+    } else { setCursorPosition(this.value.length, this); }
   }
   popupPhone.addEventListener('input', mask, false);
   popupPhone.addEventListener('focus', mask, false);
