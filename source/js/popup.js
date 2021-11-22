@@ -25,7 +25,7 @@ popupOpen.addEventListener('click', (evt) => {
   body.classList.add('no-scroll');
   popupName.focus();
   if (storage) {
-
+    popupName.focus();
   }
 });
 
