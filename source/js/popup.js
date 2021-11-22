@@ -21,11 +21,12 @@ try {
 
 popupOpen.addEventListener('click', (evt) => {
   evt.preventDefault;
-  popupName.focus();
+
   popupOverlay.classList.add('popup-wrapper--overlay');
   body.classList.add('no-scroll');
   if (storage) {
     popupName.focus();
+    popupName.select();
   }
 });
 
