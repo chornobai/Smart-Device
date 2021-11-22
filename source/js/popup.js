@@ -9,7 +9,13 @@ const body = document.querySelector('body');
 
 // Проверка - поддерживает ли браузер запись в LocalStorage //
 let isStorageSupport = true;
+let storage = '';
 
+try {
+  storage = localStorage.getItem('name');
+} catch (err) {
+  isStorageSupport = false;
+}
 
 // Открытие и модального окна установка фокуса в поле
 
@@ -18,6 +24,9 @@ popupOpen.addEventListener('click', (evt) => {
   popupOverlay.classList.add('popup-wrapper--overlay');
   body.classList.add('no-scroll');
   popupName.focus();
+  if (storage) {
+
+  }
 });
 
 // Запись в LocalStorage //
